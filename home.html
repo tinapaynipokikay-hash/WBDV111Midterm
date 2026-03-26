@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOME PAGE</title>
+<style>
+	/*FONT FAMILY*/
+	@import url('https://fonts.googleapis.com/css2?family=Griffy');
+
+	.griffy-family{
+		font-family: "Griffy", system-ui;
+	}
+
+	body {
+	background-color:black;
+	background-image: url("lightning.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:cover;
+	}
+	
+	.header {
+    width:80%;
+    height:200px;
+	background-size:cover;
+	background-image:url('quote1.png');
+    float:left;
+	background-position:center;
+	background-repeat:no-repeat;
+	}
+	
+	.sideheaderleft {
+	width:10%;
+    height:230px;
+    background-color:black;
+    float:left;
+	background-size:cover;
+	background-image: url('movingeye.gif');
+	background-position:center;
+	background-repeat:no-repeat;
+	}
+	
+	.sideheaderright {
+	width:10%;
+    height:230px;
+    background-color:black;
+    float:left;
+	background-size:cover;
+	background-image: url('movingeye.gif');
+	background-position:center;
+	background-repeat:no-repeat;
+	}
+	
+	.sidebar{
+	  width:10%;
+	  height:500px;
+	  padding:20px;
+	  position:relative;
+	  overflow:hidden;
+	  text-align: center;
+	  background-color: black;
+	  float:left;
+	  color:white;
+	  border-right:2px solid #800000;
+	}
+	
+	.sidebar img{
+	  width:70px;
+	}
+	
+	.main{
+	  width:79%;
+	  height:600px;
+	  padding:20px;
+	  position:relative;
+	  overflow:hidden;
+	  text-align: center;
+	  background-color: rgba(0,0,0,0.5);
+	  background-size: cover;
+	  background-position:center;
+	  background-repeat:no-repeat;
+	  float:left;
+	  color:white;
+	}
+	
+		#search.slider {
+		  color: white; 
+		}
+
+		#search.slider::placeholder {
+		  color: rgba(255,255,255,0.7); 
+		  color:white;
+		}
+
+		#search{
+		  padding:10px;
+		  width:300px;
+		  margin-bottom:20px;
+		  background:#111;
+		  color:white;
+		  border-radius:20px;
+		  padding:10px 15px;
+		  border:1px solid #800000;
+		  text-align:left;
+		}
+		
+		.section{
+		  margin-bottom:40px;
+		  color:white;
+		}
+
+		.song{
+		  background:#800000;
+		  padding:10px;
+		  text-align:center;
+		  cursor:pointer;
+		  border-radius:10px;
+		  color:white;
+		}
+
+		.artist{
+		  font-size: 13px;
+		  color: #ddd;
+		  opacity: 0.8;
+		}
+			
+		.song img{
+		  width:150px;
+		  height:150px;
+		  border-radius:10px;
+		  display:block;  
+		  margin:0 auto; 
+		}
+
+
+		.volume-slider {
+		  -webkit-appearance: none;
+		  width: 200px;
+		  height: 6px;
+		  border-radius: 3px;
+		  background: #800000;      
+		}
+
+		.volume-slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  width: 16px;
+		  height: 16px;
+		  background: #800000;       
+		  border-radius: 50%;
+		  cursor: pointer;
+		  border: 2px solid white;
+		}
+
+		.volume-slider::-moz-range-track {
+		  background: #800000;      
+		}
+
+		.volume-slider::-moz-range-thumb {
+		  background: #800000;
+		  border: 2px solid white; 
+		  border-radius: 50%;
+		}
+
+
+		.progress-slider {
+		  -webkit-appearance: none;
+		  width: 400px;
+		  height: 6px;
+		  border-radius: 3px;
+		  background: linear-gradient(to right, #1DB954 0%, #1DB954 0%, #555 0%, #555 100%);
+		  border: 2px solid #800000; 
+		}
+
+		.progress-slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  width: 16px;
+		  height: 16px;
+		  background: white;
+		  border-radius: 50%;
+		  cursor: pointer;
+		  border: 2px solid white;
+		}
+
+		.progress-slider::-moz-range-track {
+		  background: #555;
+		}
+
+		.progress-slider::-moz-range-thumb {
+		  background: white;
+		  border-radius: 50%;
+		  border: 2px solid white;
+		}
+
+</style>
+<body>
+
+	<div class="sideheaderleft">
+	</div>
+	
+	<div class="header">
+	</div>
+	
+	<div class="sideheaderright">
+	</div>
+
+	<div class="sidebar">
+	<a href=home.html> <img src=house.png width=75  height=75 > </a>
+	<h1>HOME</h1>
+	<br>
+	<a href=artist.html> <img src=artist.png width=75  height=75 > </a>
+	<h1>ARTISTS</h1>
+	<br>
+	<a href=vip.html> <img src=vip.png width=75 height=75 > </a>
+	<h1>JOIN VIP</h1>
+	</div>
+
+	</div>
+	
+
+	<div class="main">
+	<a href=login.html> <img src=login.png width=50 height=50> </a>
+	
+	<br> <br>
+	<input id="search" placeholder="What do you want to play?.." onkeyup="searchAlbums()">
+	
+		<h1>======================Songs You May Relate To======================</h1>
+		<div style="display:flex; gap:20px;">
+		  <div class="song" onclick="playSong('Far From Heaven')">
+			<img src="heaven.png"><br>Far From Heaven
+			<div class="artist">Evanescene</div>
+		  </div>
+		  <div class="song" onclick="playSong('Hindi Ako NagBi-Brip')">
+			<img src="brip.png"><br>Hindi Ako NagBi-Brip
+			<div class="artist">Mikerapphone</div>
+		  </div>
+		  <div class="song" onclick="playSong('Lambingin Mo Naman Ako')">
+			<img src="lambing.jpg"><br>Lambingin Mo Naman Ako
+			<div class="artist">Soulmate</div>
+		  </div>
+		  <div class="song" onclick="playSong('Problema')">
+			<img src="problema.jpg"><br>Problema
+			<div class="artist">Carlos Agassi</div>
+		  </div>
+		  <div class="song" onclick="playSong('Sulutera')">
+			<img src="sulu.jpg"><br>Sulutera
+			<div class="artist">princessrica</div>
+		  </div>
+		  <div class="song" onclick="playSong('Subway')">
+			<img src="sub.png"><br>Subway
+			<div class="artist">Chappel Roan</div>
+		  </div> 
+		  <div class="song" onclick="playSong('Abbey')">
+			<img src="mitski.png"><br>Abbey
+			<div class="artist">Mitski</div>
+		  </div> 
+		</div>
+<h1>================================================================</h1>
+	<div id="nowPlaying">Now Playing: None</div>
+
+	
+	<audio id="Far From Heaven"><source src="farfromheaven.mp3" type="audio/mpeg"></audio>
+	<audio id="Hindi Ako NagBi-Brip"><source src="mikerapphone.mp3" type="audio/mpeg"></audio>
+	<audio id="Lambingin Mo Naman Ako"><source src="lmna.mp3" type="audio/mpeg"></audio>
+	<audio id="Problema"><source src="problema.mp3" type="audio/mpeg"></audio>
+	<audio id="Sulutera"><source src="sulu.mp3" type="audio/mpeg"></audio>
+	<audio id="Subway"><source src="sub.mp3" type="audio/mpeg"></audio>
+	<audio id="Abbey"><source src="abbey.mp3" type="audio/mpeg"></audio>
+	
+	<button onclick="currentSong && currentSong.play()">▶</button>
+	<button onclick="currentSong && currentSong.pause()">⏸</button>
+	
+	<input type="range" id="progress" class="slider" min="0" max="100" value="0">
+
+	<span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+	
+	<br> <br>
+	<input type="range" id="volume" class="volume-slider" min="0" max="1" step="0.01" value="1">
+
+	
+<script>
+let currentSong = null;
+
+function playSong(id){
+  if(currentSong && !currentSong.paused){
+    currentSong.pause();
+  }
+  currentSong = document.getElementById(id);
+  currentSong.play();
+  document.getElementById("nowPlaying").innerText = "Now Playing: " + id;
+}
+
+document.getElementById("volume").addEventListener("input", function(){
+  if(currentSong){
+    currentSong.volume = this.value;
+  }
+});
+
+const progressBar = document.getElementById("progress");
+const currentTimeText = document.getElementById("currentTime");
+const durationText = document.getElementById("duration");
+
+setInterval(() => {
+  if(currentSong){
+    const percent = (currentSong.currentTime / currentSong.duration) * 100;
+    progressBar.value = percent || 0;
+    currentTimeText.innerText = formatTime(currentSong.currentTime);
+  }
+}, 500);
+
+progressBar.addEventListener("input", () => {
+  if(currentSong){
+    currentSong.currentTime = (progressBar.value / 100) * currentSong.duration;
+  }
+});
+
+function formatTime(seconds){
+  const mins = Math.floor(seconds / 60) || 0;
+  const secs = Math.floor(seconds % 60) || 0;
+  return mins + ":" + (secs < 10 ? "0" + secs : secs);
+}
+</script>
+
+</body>
+</html>
